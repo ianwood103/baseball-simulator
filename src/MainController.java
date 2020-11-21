@@ -22,6 +22,8 @@ public class MainController {
     public Pane pane9;
     public AnchorPane ap;
     public Button button;
+    private OutcomeController controller;
+    private Player player;
 
     public void pickLocation() throws Exception{
         int num = (int) (Math.random() * 9);
@@ -57,13 +59,20 @@ public class MainController {
             Parent root = null;
 
             try {
-                root = FXMLLoader.load(getClass().getResource("Outcome.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("Outcome.fxml"));
+                root = loader.load();
+                controller = loader.getController();
+                controller.updateStats(player);
             } catch (IOException ioException) {
                 ioException.printStackTrace();
             }
-            window.setScene(new Scene(root, window.getWidth(), window.getHeight()));
+            window.setScene(new Scene(root));
         });
         button.setText("Continue");
         button.styleProperty().set("-fx-background-color: green");
+    }
+
+    public void updateStats(Player player) {
+        this.player = player;
     }
 }

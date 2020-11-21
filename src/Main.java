@@ -14,9 +14,15 @@ public class Main extends Application {
 
     public void start(Stage primaryStage) throws Exception {
         window = primaryStage;
-        Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
-        window.setTitle("Baseball Simulator");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Main.fxml"));
+        Parent root = loader.load();
+        MainController controller = loader.getController();
 
+        Player player = new Player();
+        player.add("single");
+        controller.updateStats(player);
+
+        window.setTitle("Baseball Simulator");
         Scene scene = new Scene(root);
         window.setScene(scene);
         window.show();

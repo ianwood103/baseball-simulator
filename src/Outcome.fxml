@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@Outcome.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OutcomeController">
+<AnchorPane fx:id="ap" prefHeight="700.0" prefWidth="1200.0" stylesheets="@Outcome.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OutcomeController">
    <children>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -35,7 +35,7 @@
                         <Insets />
                      </HBox.margin>
                   </VBox>
-                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Submit">
+                  <Button mnemonicParsing="false" onAction="#submit" prefHeight="30.0" prefWidth="100.0" text="Submit">
                      <HBox.margin>
                         <Insets left="50.0" />
                      </HBox.margin>
