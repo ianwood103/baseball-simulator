@@ -1,17 +1,20 @@
 import java.text.DecimalFormat;
 
+//Class for housing and calculating statistics for the player based off of their at-bats so far
 public class Player {
 
-    //Instantiating variables
+    //Instantiating instance variables
     private int singles;
     private int doubles;
     private int triples;
     private int homers;
     private int walks;
     private int outs;
+
+    //Defines decimal format so that OPS, OBP, SLG, and Average are all displayed with 3 decimal places
     private final DecimalFormat df = new DecimalFormat("#.000");
 
-    //Constructor
+    //Constructor, sets all information to zero when Player object is first created
     public Player() {
         singles = 0;
         doubles = 0;
@@ -21,6 +24,7 @@ public class Player {
         outs = 0;
     }
 
+    //Used to update instance variables based on outcome from Outcome scene
     public void add(String outcome) {
         switch (outcome) {
             case "single" -> this.singles++;
@@ -34,6 +38,7 @@ public class Player {
     }
 
     //Statistic methods
+    //All of these are getters for a certain statistic calculated from the current instance variables in the Player object
     public String getOPS() {
         double value = Double.parseDouble(this.getOBP()) + Double.parseDouble(this.getSLG());
         return df.format(value);

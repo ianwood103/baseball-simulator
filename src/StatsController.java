@@ -5,9 +5,10 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+//Controller class for Stats.fxml
 public class StatsController {
-    private Player player;
 
+    //Instantiates variables corresponding to node ids in Stats.fxml
     public AnchorPane ap;
     public Label averageLabel;
     public Label obpLabel;
@@ -16,9 +17,14 @@ public class StatsController {
     public Label homerLabel;
     public Label paLabel;
 
+    //Instantiates player object so that controller can receive and store data from OutcomeController
+    private Player player;
+
+    //Accepts updated data from OutcomeController and displays it on the screen
     public void updateStats(Player player) {
         this.player = player;
 
+        //Sets each label to hold its corresponding value for each statistic
         averageLabel.setText(String.valueOf(player.getAverage()));
         obpLabel.setText(String.valueOf(player.getOBP()));
         slgLabel.setText(String.valueOf(player.getSLG()));
@@ -27,11 +33,17 @@ public class StatsController {
         paLabel.setText(String.valueOf(player.getPlateAppearances()));
     }
 
+    //Sets the scene back to the main location setting scene to simulate another at-bat
     public void restart() throws Exception {
+        //Loads data from Main.fxml into program
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Main.fxml"));
         Parent root = loader.load();
+
+        //Saves controller and passes updated player data into it
         MainController controller = loader.getController();
         controller.updateStats(player);
+
+        //Retrieves stage from AnchorPane in Stats.fxml and sets the scene to be the layout from Main.fxml
         Stage window = (Stage) ap.getScene().getWindow();
         Scene scene = new Scene(root);
         window.setScene(scene);
