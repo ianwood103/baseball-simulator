@@ -19,7 +19,6 @@ public class Main extends Application {
         MainController controller = loader.getController();
 
         Player player = new Player();
-        player.add("single");
         controller.updateStats(player);
 
         window.setTitle("Baseball Simulator");
