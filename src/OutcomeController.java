@@ -44,7 +44,6 @@ public class OutcomeController {
             System.out.println("error: no outcome selected");
         }
 
-        System.out.println(player);
         this.showStats();
     }
 

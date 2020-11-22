@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 public class Player {
 
     //Instantiating variables
@@ -7,6 +9,7 @@ public class Player {
     private int homers;
     private int walks;
     private int outs;
+    private final DecimalFormat df = new DecimalFormat("#.000");
 
     //Constructor
     public Player() {
@@ -19,26 +22,36 @@ public class Player {
     }
 
     public void add(String outcome) {
-        if (outcome.equals("single")) {
-            this.singles++;
-        } else if (outcome.equals("double")) {
-            this.doubles++;
-        } else if (outcome.equals("triple")) {
-            this.triples++;
-        } else if (outcome.equals("homer")) {
-            this.homers++;
-        } else if (outcome.equals("walk")) {
-            this.walks++;
-        } else if (outcome.equals("out")) {
-            this.outs++;
-        } else {
-            System.out.println("invalid type");
+        switch (outcome) {
+            case "single" -> this.singles++;
+            case "double" -> this.doubles++;
+            case "triple" -> this.triples++;
+            case "homer" -> this.homers++;
+            case "walk" -> this.walks++;
+            case "out" -> this.outs++;
+            default -> System.out.println("invalid type");
         }
     }
 
-    //Methods
-    public double getOPS() {
-        return this.getOBP() + this.getSLG();
+    //Statistic methods
+    public String getOPS() {
+        double value = Double.parseDouble(this.getOBP()) + Double.parseDouble(this.getSLG());
+        return df.format(value);
+    }
+
+    public String getSLG() {
+        double value = (double)(this.getTotalBases()) / (double)(this.getAtBats());
+        return df.format(value);
+    }
+
+    public String getOBP() {
+        double value = (double)(this.getTimesOnBase()) / (double)(this.getPlateAppearances());
+        return df.format(value);
+    }
+
+    public String getAverage() {
+        double value = (double)(getTotalHits()) / (double)(getAtBats());
+        return df.format(value);
     }
 
     public int getAtBats() {
@@ -47,21 +60,6 @@ public class Player {
 
     public int getPlateAppearances() {
         return singles + doubles + triples + homers + walks + outs;
-    }
-
-    public double getSLG() {
-        double value = (double)(this.getTotalBases()) / (double)(this.getAtBats());
-        return (double)Math.round(value * 1000d) / 1000d;
-    }
-
-    public double getOBP() {
-        double value = (double)(this.getTimesOnBase()) / (double)(this.getPlateAppearances());
-        return (double)Math.round(value * 1000d) / 1000d;
-    }
-
-    public double getAverage() {
-        double value = (double)(getTotalHits()) / (double)(getAtBats());
-        return (double)Math.round(value * 1000d) / 1000d;
     }
 
     public int getTotalBases() {
