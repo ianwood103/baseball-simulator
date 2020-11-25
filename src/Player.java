@@ -24,6 +24,15 @@ public class Player {
         outs = 0;
     }
 
+    public Player(int singles, int doubles, int triples, int homers, int walks, int outs) {
+        this.singles = singles;
+        this.doubles = doubles;
+        this.triples = triples;
+        this.homers = homers;
+        this.walks = walks;
+        this.outs = outs;
+    }
+
     //Used to update instance variables based on outcome from Outcome scene
     public void add(String outcome) {
         switch (outcome) {
