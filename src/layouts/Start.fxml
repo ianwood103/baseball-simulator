@@ -16,10 +16,16 @@
                <content>
                   <AnchorPane>
                      <children>
-                        <VBox fx:id="playerArea" alignment="CENTER" spacing="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0" />
+                        <VBox fx:id="playerArea" alignment="CENTER" spacing="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+                           <padding>
+                              <Insets bottom="20.0" />
+                           </padding></VBox>
                      </children>
                   </AnchorPane>
                </content>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
             </ScrollPane>
          </center>
          <top>
