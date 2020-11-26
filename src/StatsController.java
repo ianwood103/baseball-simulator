@@ -41,15 +41,15 @@ public class StatsController {
 
     //Sets the scene back to the main location setting scene to simulate another at-bat
     public void restart() throws Exception {
-        //Loads data from Main.fxml into program
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Main.fxml"));
+        //Loads data from Location.fxml into program
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Location.fxml"));
         Parent root = loader.load();
 
         //Saves controller and passes updated player data into it
-        MainController controller = loader.getController();
+        LocationController controller = loader.getController();
         controller.updateStats(player);
 
-        //Retrieves stage from AnchorPane in Stats.fxml and sets the scene to be the layout from Main.fxml
+        //Retrieves stage from AnchorPane in Stats.fxml and sets the scene to be the layout from Location.fxml
         Stage window = (Stage) ap.getScene().getWindow();
         Scene scene = new Scene(root);
         window.setScene(scene);
@@ -70,7 +70,7 @@ public class StatsController {
         playerObject.put("outs", player.getOuts());
 
         //Writes this object into player.json file
-        try (FileWriter file = new FileWriter("src/player.json")) {
+        try (FileWriter file = new FileWriter("src/players/" + player.getPlayerName() + "/player.json")) {
             file.write(playerObject.toJSONString());
         } catch (IOException e) {
             e.printStackTrace();

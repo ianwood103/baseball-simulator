@@ -1,0 +1,13 @@
+#header {
+    -fx-text-fill: white;
+    -fx-background-color: black;
+}
+
+.scroll-pane {
+    -fx-border-width: 0px;
+    -fx-background-color: transparent;
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: white;
+}

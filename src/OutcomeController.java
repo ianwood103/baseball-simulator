@@ -33,7 +33,7 @@ public class OutcomeController {
     }
 
     //Run when submit button is clicked, adds the selected outcome into the player object
-    public void submit() throws Exception{
+    public void submit() throws Exception {
         if (singleButton.isSelected()) {
             player.add("single");
         } else if (doubleButton.isSelected()) {

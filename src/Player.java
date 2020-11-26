@@ -10,6 +10,7 @@ public class Player {
     private int homers;
     private int walks;
     private int outs;
+    private String playerName;
 
     //Defines decimal format so that OPS, OBP, SLG, and Average are all displayed with 3 decimal places
     private final DecimalFormat df = new DecimalFormat("#.000");
@@ -24,13 +25,14 @@ public class Player {
         outs = 0;
     }
 
-    public Player(int singles, int doubles, int triples, int homers, int walks, int outs) {
+    public Player(int singles, int doubles, int triples, int homers, int walks, int outs, String playerName) {
         this.singles = singles;
         this.doubles = doubles;
         this.triples = triples;
         this.homers = homers;
         this.walks = walks;
         this.outs = outs;
+        this.playerName = playerName;
     }
 
     //Used to update instance variables based on outcome from Outcome scene
@@ -135,6 +137,14 @@ public class Player {
 
     public void setOuts(int outs) {
         this.outs = outs;
+    }
+
+    public String getPlayerName() {
+        return playerName;
+    }
+
+    public void setPlayerName(String playerName) {
+        this.playerName = playerName;
     }
 
     @Override

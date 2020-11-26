@@ -9,10 +9,10 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-//Controller class for Main.fxml
-public class MainController {
+//Controller class for Location.fxml
+public class LocationController {
 
-    //Instantiates variables corresponding to node ids in Main.fxml
+    //Instantiates variables corresponding to node ids in Location.fxml
     public Pane pane1;
     public Pane pane2;
     public Pane pane3;
@@ -70,7 +70,7 @@ public class MainController {
 
         //Sets the new action of the button to be changing the scene to the one held in Outcome.fxml
         button.setOnAction(e -> {
-            //Gets stage from the AnchorPane node in Main.fxml
+            //Gets stage from the AnchorPane node in Location.fxml
             Stage window = (Stage) ap.getScene().getWindow();
             Parent root = null;
 

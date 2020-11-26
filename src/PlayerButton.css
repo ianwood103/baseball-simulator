@@ -1,0 +1,24 @@
+.divider {
+    -fx-background-color: black;
+}
+
+.button {
+    -fx-background-color: white;
+    -fx-border-width: 2px;
+    -fx-border-color: black;
+    -fx-border-style: solid;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+.button:hover {
+    -fx-background-color: black;
+}
+
+.button:hover .label {
+    -fx-text-fill: white;
+}
+
+.button:hover .divider {
+    -fx-background-color: white;
+}
