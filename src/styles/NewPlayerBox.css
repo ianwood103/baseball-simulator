@@ -1,0 +1,22 @@
+.button {
+    -fx-background-color: white;
+    -fx-border-width: 2px;
+    -fx-border-color: black;
+    -fx-border-style: solid;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+.button:hover {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+#new-box {
+    -fx-background-color: white;
+    -fx-border-width: 2px;
+    -fx-border-color: black;
+    -fx-border-style: solid;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}

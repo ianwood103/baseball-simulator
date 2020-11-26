@@ -21,9 +21,6 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("layouts/Start.fxml"));
         Parent root = loader.load();
 
-        //Saves the controller for this layout into controller
-        StartController controller = loader.getController();
-
         //Sets title to Baseball Simulator
         window.setTitle("Baseball Simulator");
 
