@@ -1,5 +1,7 @@
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -12,6 +14,8 @@ import java.io.Reader;
 
 public class StartController {
     public VBox playerArea;
+    public ScrollPane scrollView;
+    public Button newButton;
 
     public void initialize() throws Exception {
         File playerPath = new File("src/players/");
@@ -46,5 +50,14 @@ public class StartController {
         }
         controller.fillData(playerName, tempPlayer.getAverage(), tempPlayer.getOPS(), String.valueOf(tempPlayer.getHomers()), String.valueOf(tempPlayer.getAtBats()));
         playerArea.getChildren().add(playerButton);
+    }
+
+    public void newButtonClick() throws Exception {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("layouts/NewPlayerBox.fxml"));
+        AnchorPane newBox = (AnchorPane) loader.load();
+        NewPlayerBoxController controller = loader.getController();
+
+        newButton.setOnAction(e -> System.out.println("New player box already created"));
+        playerArea.getChildren().add(newBox);
     }
 }

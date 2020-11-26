@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="new-box" fx:id="ap" maxWidth="400.0" prefHeight="100.0" prefWidth="400.0" stylesheets="@../styles/NewPlayerBox.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NewPlayerBoxController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <TextField fx:id="playerField" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </TextField>
+            <Button mnemonicParsing="false" onAction="#onClick" prefWidth="70.0" text="Create" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
