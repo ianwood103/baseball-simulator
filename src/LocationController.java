@@ -7,7 +7,6 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
 //Controller class for Location.fxml
 public class LocationController {
@@ -78,7 +77,7 @@ public class LocationController {
             try {
 
                 //Loads Outcome.fxml into the program
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("Outcome.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("layouts/Outcome.fxml"));
                 root = loader.load();
 
                 //Passes the player data into the controller

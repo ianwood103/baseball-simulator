@@ -62,7 +62,7 @@ public class OutcomeController {
     //Moves onto the screen that shows the player's current statistics
     public void showStats() throws Exception {
         //Loads layout from Stats.fxml into the program
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Stats.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("layouts/Stats.fxml"));
         Parent root = loader.load();
 
         //Saves the controller and passes player data into it

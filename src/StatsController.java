@@ -42,7 +42,7 @@ public class StatsController {
     //Sets the scene back to the main location setting scene to simulate another at-bat
     public void restart() throws Exception {
         //Loads data from Location.fxml into program
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Location.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("layouts/Location.fxml"));
         Parent root = loader.load();
 
         //Saves controller and passes updated player data into it

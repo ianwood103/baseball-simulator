@@ -3,13 +3,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.Reader;
 
 //Main class that the program starts under
 public class Main extends Application {
@@ -25,7 +18,7 @@ public class Main extends Application {
         window = primaryStage;
 
         //Loads fxml from Location.fxml into root
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Start.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("layouts/Start.fxml"));
         Parent root = loader.load();
 
         //Saves the controller for this layout into controller

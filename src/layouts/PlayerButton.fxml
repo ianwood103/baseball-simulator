@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 
 
-<Button fx:id="playerButton" mnemonicParsing="false" onAction="#onClick" prefHeight="100.0" prefWidth="400.0" stylesheets="@PlayerButton.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PlayerButtonController">
+<Button fx:id="playerButton" mnemonicParsing="false" onAction="#onClick" prefHeight="100.0" prefWidth="400.0" stylesheets="@../styles/PlayerButton.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PlayerButtonController">
    <graphic>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>

@@ -36,7 +36,7 @@ public class PlayerButtonController {
 
         Stage window = (Stage) playerButton.getScene().getWindow();
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Location.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("layouts/Location.fxml"));
         Parent root = loader.load();
 
         //Saves the controller for this layout into controller

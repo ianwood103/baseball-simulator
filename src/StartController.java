@@ -24,7 +24,7 @@ public class StartController {
     }
 
     public void loadButtons(String playerName) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("PlayerButton.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("layouts/PlayerButton.fxml"));
         Button playerButton = (Button) loader.load();
         PlayerButtonController controller = loader.getController();
 
