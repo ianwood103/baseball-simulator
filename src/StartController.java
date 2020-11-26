@@ -47,4 +47,12 @@ public class StartController {
         controller.fillData(playerName, tempPlayer.getAverage(), tempPlayer.getOPS(), String.valueOf(tempPlayer.getHomers()), String.valueOf(tempPlayer.getAtBats()));
         playerArea.getChildren().add(playerButton);
     }
+
+    public void newButtonClick() throws Exception {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("layouts/NewPlayerBox.fxml"));
+        Button newBox = (Button) loader.load();
+        NewPlayerBoxController controller = loader.getController();
+
+        playerArea.getChildren().add(newBox);
+    }
 }

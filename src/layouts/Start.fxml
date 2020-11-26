@@ -40,5 +40,17 @@
             </AnchorPane>
          </top>
       </BorderPane>
+      <BorderPane nodeOrientation="RIGHT_TO_LEFT" AnchorPane.bottomAnchor="35.0" AnchorPane.rightAnchor="40.0">
+         <bottom>
+            <Button id="new-button" alignment="CENTER" mnemonicParsing="false" onAction="#newButtonClick" prefHeight="70.0" prefWidth="70.0" text="+" textAlignment="CENTER" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets left="-0.0" />
+               </BorderPane.margin>
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+         </bottom>
+      </BorderPane>
    </children>
 </AnchorPane>
